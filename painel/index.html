@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow"><title>Painel Tips35</title>
+<style>
+:root { --bg:#f5f6f8; --card:#fff; --fg:#111; --muted:#666; --accent:#0a8f4d; --btn:#111; --btnfg:#fff; --line:#ddd; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#0b0e13; --card:#141a22; --fg:#eee; --muted:#9aa4b2; --accent:#3ddc84; --btn:#3ddc84; --btnfg:#06210f; --line:#26303c; } }
+:root[data-theme="dark"] { --bg:#0b0e13; --card:#141a22; --fg:#eee; --muted:#9aa4b2; --accent:#3ddc84; --btn:#3ddc84; --btnfg:#06210f; --line:#26303c; }
+body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.45 system-ui, "Segoe UI", sans-serif; }
+main { max-width:640px; margin:0 auto; padding:16px; }
+h1 { font-size:20px; margin:8px 0 4px; } p.sub { color:var(--muted); margin:0 0 16px; font-size:14px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px; margin-bottom:14px; }
+.card header { display:flex; justify-content:space-between; gap:8px; font-size:14px; color:var(--muted); }
+.card.enviado { border-color:var(--accent); border-width:2px; }
+.hora { font-weight:700; color:var(--fg); }
+h2 { font-size:17px; margin:8px 0; }
+textarea { width:100%; box-sizing:border-box; background:transparent; color:var(--fg); border:1px solid var(--line); border-radius:10px; padding:10px; font:inherit; font-size:14px; resize:vertical; }
+button { width:100%; margin-top:10px; padding:14px; border:0; border-radius:10px; background:var(--btn); color:var(--btnfg); font-size:16px; font-weight:700; }
+</style></head><body><main>
+<h1>Painel de postagem @tips35cmd</h1>
+<p class="sub">Quando chegar a notificação do TikTok: abra o rascunho, toque em <b>Copiar legenda</b> aqui, cole e publique.
+Atualizado em 17/11 11:30.</p>
+
+<article class="card pendente">
+  <header><span class="hora">Hoje · 18:00</span><span class="estado">⏳ na fila</span></header>
+  <h2>SEU PING TÁ ALTO? A CULPA É SUA OU DO SERVIDOR?</h2>
+  <textarea id="l0" readonly rows="7">Lag no jogo? Descubra em 10 segundos se o problema é a SUA internet ou o servidor 🎮
+
+ping 8.8.8.8 -t
+(Ctrl+C para parar)
+
+✅ tempo &lt; 30ms e 0% de perda = sua rede está ok
+⚠️ picos ou &quot;tempo limite&quot; na hora do lag = problema na sua rede (Wi-Fi, download, roteador)
+
+Bônus: tracert 8.8.8.8 mostra em que parte do caminho está o atraso.
+
+#cmd #windows #dicasdepc #fpsboost #pcgamer #tips35cmd #lag #ping</textarea>
+  <button onclick="copiar('l0', this)">Copiar legenda</button>
+</article>
+<article class="card pendente">
+  <header><span class="hora">Hoje · 21:00</span><span class="estado">⏳ na fila</span></header>
+  <h2>O MODO ESCONDIDO DE DESEMPENHO MÁXIMO</h2>
+  <textarea id="l1" readonly rows="7">O plano de energia ESCONDIDO do Windows ⚡
+
+CMD como administrador:
+powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
+
+Depois: powercfg.cpl → marque &quot;Desempenho Máximo&quot;
+
+🔋 No notebook gasta mais bateria e esquenta: use na tomada.
+↩️ Para voltar: marque &quot;Equilibrado&quot;.
+
+Bônus: powercfg /list mostra qual plano está ativo (o do asterisco).
+
+#cmd #windows #dicasdepc #fpsboost #pcgamer #tips35cmd</textarea>
+  <button onclick="copiar('l1', this)">Copiar legenda</button>
+</article>
+<article class="card pendente">
+  <header><span class="hora">Amanhã · 11:30</span><span class="estado">⏳ na fila</span></header>
+  <h2>SITE NÃO ABRE? JOGO NÃO CONECTA?</h2>
+  <textarea id="l2" readonly rows="7">Site não abre ou jogo não conecta, mas a internet funciona? Limpe o cache de DNS 🌐
+
+ipconfig /flushdns
+
+Curiosidade: ipconfig /displaydns mostra os sites que o PC &quot;lembra&quot;.
+
+✅ Seguro, não apaga nada seu e não precisa reiniciar.
+
+Bônus: ipconfig /all mostra qual servidor de DNS você usa.
+
+#cmd #windows #dicasdepc #fpsboost #pcgamer #tips35cmd #internet</textarea>
+  <button onclick="copiar('l2', this)">Copiar legenda</button>
+</article>
+<article class="card pendente">
+  <header><span class="hora">Amanhã · 18:00</span><span class="estado">⏳ na fila</span></header>
+  <h2>WINDOWS TRAVANDO? CONSERTE ANTES DE FORMATAR</h2>
+  <textarea id="l3" readonly rows="7">Windows travando ou dando tela azul? Antes de formatar, tente isto 🛠️
+
+CMD como administrador, um de cada vez:
+1) DISM /Online /Cleanup-Image /RestoreHealth
+2) sfc /scannow
+
+⏱️ Uns 15 min. Não feche a janela. Depois reinicie.
+✅ Não apaga seus arquivos: só repara o sistema.
+
+Bônus: chkdsk C: /scan verifica o disco sem reiniciar.
+
+#cmd #windows #dicasdepc #fpsboost #pcgamer #tips35cmd</textarea>
+  <button onclick="copiar('l3', this)">Copiar legenda</button>
+</article>
+<article class="card pendente">
+  <header><span class="hora">Amanhã · 21:00</span><span class="estado">⏳ na fila</span></header>
+  <h2>QUEM ESTÁ USANDO SUA INTERNET AGORA?</h2>
+  <textarea id="l4" readonly rows="7">Descubra quais programas estão usando sua internet AGORA 👀
+
+CMD como administrador:
+netstat -b
+
+Aparece cada conexão com o nome do programa (Steam, Discord, atualizações...).
+🔎 Nome estranho? Pesquise antes de qualquer coisa.
+✅ Só mostra: não muda nada no PC.
+
+Bônus sem admin: netstat -ano (PID na última coluna) + tasklist /fi &quot;pid eq NÚMERO&quot;
+
+#cmd #windows #dicasdepc #fpsboost #pcgamer #tips35cmd #seguranca</textarea>
+  <button onclick="copiar('l4', this)">Copiar legenda</button>
+</article>
+<article class="card pendente">
+  <header><span class="hora">19/11 · 11:30</span><span class="estado">⏳ na fila</span></header>
+  <h2>A SAÚDE REAL DA BATERIA DO NOTEBOOK</h2>
+  <textarea id="l5" readonly rows="7">Quanto a bateria do seu notebook já perdeu? 🔋
+
+powercfg /batteryreport
+
+Abra o arquivo battery-report.html e compare:
+FULL CHARGE CAPACITY ÷ DESIGN CAPACITY
+
+Abaixo de 60% = hora de pensar em trocar.
+✅ Só gera o relatório, não muda nada.
+
+Bônus (admin): powercfg /energy mostra o que gasta bateria à toa.
+
+#cmd #windows #dicasdepc #fpsboost #pcgamer #tips35cmd #notebook</textarea>
+  <button onclick="copiar('l5', this)">Copiar legenda</button>
+</article>
+</main>
+<script>
+function copiar(id, b) {
+  const t = document.getElementById(id);
+  const ok = () => { b.textContent = 'Copiado ✓'; setTimeout(() => b.textContent = 'Copiar legenda', 2000); };
+  if (navigator.clipboard) navigator.clipboard.writeText(t.value).then(ok, () => { t.select(); document.execCommand('copy'); ok(); });
+  else { t.select(); document.execCommand('copy'); ok(); }
+}
+</script></body></html>
