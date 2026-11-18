@@ -1,0 +1,30 @@
+name: Supabase keep-alive (licencas TIPS35)
+
+# O plano gratis do Supabase pausa projetos sem uso por alguns dias.
+# Uma consulta diaria a funcao de validacao conta como uso e evita a pausa.
+on:
+  schedule:
+    - cron: "17 9 * * *"   # todo dia 06:17 (Brasilia)
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Consultar servidor de licencas
+        env:
+          SUPABASE_URL: ${{ secrets.TIPS35_SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.TIPS35_SUPABASE_PUBLISHABLE_KEY }}
+        run: |
+          for i in 1 2 3; do
+            resp=$(curl -s -m 30 -X POST "$SUPABASE_URL/rest/v1/rpc/validate_license" \
+              -H "apikey: $SUPABASE_KEY" -H "Authorization: Bearer $SUPABASE_KEY" \
+              -H "Content-Type: application/json" \
+              -d '{"p_key":"KEEPALIVE","p_machine_id":"github-actions-keepalive"}') || true
+            echo "resposta: $resp"
+            case "$resp" in *'"reason"'*) echo "servidor ativo"; exit 0;; esac
+            sleep 20
+          done
+          echo "::error::Servidor de licencas nao respondeu. Confira se o projeto Supabase foi pausado."
+          exit 1
