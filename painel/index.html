@@ -18,152 +18,12 @@ button { width:100%; margin-top:10px; padding:14px; border:0; border-radius:10px
 </style></head><body><main>
 <h1>Painel de postagem @tips35cmd</h1>
 <p class="sub">Quando chegar a notificação do TikTok: abra o rascunho, toque em <b>Copiar legenda</b> aqui, cole e publique.
-Atualizado em 20/11 01:01.</p>
+Atualizado em 23/11 11:30.</p>
 
-<article class="card agendado">
-  <header><span class="hora">19/11 · 11:30</span><span class="estado">🗓️ agendado no TikTok</span></header>
-  <h2>QUAL É O SEU IP? O LOCAL E O PÚBLICO</h2>
-  <textarea id="l0" readonly rows="7">Seu PC tem DOIS IPs. Veja os dois em segundos 🌐
-
-ipconfig → IP local (Endereço IPv4)
-curl ifconfig.me → IP público
-
-Bônus: ipconfig /all mostra o MAC da placa de rede.
-⚠️ Não mostre o IP público em live ou print.
-
-#cmd #windows #dicasdepc #fpsboost #pcgamer #tips35cmd #internet</textarea>
-  <button onclick="copiar('l0', this)">Copiar legenda</button>
-</article>
-<article class="card agendado">
-  <header><span class="hora">19/11 · 18:00</span><span class="estado">🗓️ agendado no TikTok</span></header>
-  <h2>TUDO SOBRE O SEU PC EM UM COMANDO</h2>
-  <textarea id="l1" readonly rows="7">A ficha completa do seu PC sem instalar nada 🖥️
-
-systeminfo
-
-Olhe &quot;Memória física total&quot; e &quot;Memória disponível&quot;: disponível perto de zero no jogo = falta RAM.
-
-Bônus: systeminfo | find &quot;Data&quot; mostra só as datas (instalação e último boot).
-✅ Só mostra, não muda nada.
-
-#cmd #windows #dicasdepc #fpsboost #pcgamer #tips35cmd</textarea>
-  <button onclick="copiar('l1', this)">Copiar legenda</button>
-</article>
-<article class="card agendado">
-  <header><span class="hora">19/11 · 21:00</span><span class="estado">🗓️ agendado no TikTok</span></header>
-  <h2>SEU WINDOWS É ATIVADO DE VERDADE?</h2>
-  <textarea id="l2" readonly rows="7">Seu Windows é ativado de verdade? ✅
-
-slmgr /xpr → mostra se a ativação é permanente
-slmgr /dli → tipo de licença (RETAIL/OEM) e status
-
-⚠️ Só leitura. Fuja de &quot;ativadores&quot; da internet: vírus garantido.
-
-#cmd #windows #dicasdepc #fpsboost #pcgamer #tips35cmd</textarea>
-  <button onclick="copiar('l2', this)">Copiar legenda</button>
-</article>
-<article class="card agendado">
-  <header><span class="hora">Hoje · 11:30</span><span class="estado">🗓️ agendado no TikTok</span></header>
-  <h2>DEIXE SEU CMD COM CARA DE HACKER</h2>
-  <textarea id="l3" readonly rows="7">CMD com cara de filme de hacker 😎
-
-color 0a → fundo preto, letra verde
-tree C:\Windows → árvore de pastas rolando
-
-Ctrl+C para parar. color /? mostra todas as cores.
-✅ Só visual: fechou o CMD, volta ao normal.
-
-#cmd #windows #dicasdepc #fpsboost #pcgamer #tips35cmd #setup</textarea>
-  <button onclick="copiar('l3', this)">Copiar legenda</button>
-</article>
-<article class="card agendado">
-  <header><span class="hora">Hoje · 18:00</span><span class="estado">🗓️ agendado no TikTok</span></header>
-  <h2>LISTA DE TUDO QUE TÁ INSTALADO NO PC</h2>
-  <textarea id="l4" readonly rows="7">Tudo que está instalado no seu PC numa lista só 📋
-
-winget list
-winget list NOME → procura um programa
-
-Nome estranho? Pesquise antes e desinstale pelas Configurações.
-✅ Só mostra a lista.
-
-#cmd #windows #dicasdepc #fpsboost #pcgamer #tips35cmd</textarea>
-  <button onclick="copiar('l4', this)">Copiar legenda</button>
-</article>
-<article class="card agendado">
-  <header><span class="hora">Hoje · 21:00</span><span class="estado">🗓️ agendado no TikTok</span></header>
-  <h2>O NÚMERO DE SÉRIE DO SEU PC EM 2 SEGUNDOS</h2>
-  <textarea id="l5" readonly rows="7">Número de série do PC sem procurar etiqueta 🔎
-
-powershell (Get-CimInstance Win32_BIOS).SerialNumber
-
-Modelo exato (pra baixar driver):
-powershell Get-CimInstance Win32_ComputerSystem
-
-✅ Só leitura. Não poste o número em público.
-
-#cmd #windows #dicasdepc #fpsboost #pcgamer #tips35cmd #notebook</textarea>
-  <button onclick="copiar('l5', this)">Copiar legenda</button>
-</article>
-<article class="card agendado">
-  <header><span class="hora">Amanhã · 11:30</span><span class="estado">🗓️ agendado no TikTok</span></header>
-  <h2>ESSE DOWNLOAD É ORIGINAL?</h2>
-  <textarea id="l6" readonly rows="7">Como saber se um download é original (verificar hash no Windows) 🔐
-
-certutil -hashfile ARQUIVO SHA256
-
-Compare com o hash do site oficial. Diferente = não instale.
-✅ Só leitura.
-
-#cmd #windows #seguranca #download #tips35cmd</textarea>
-  <button onclick="copiar('l6', this)">Copiar legenda</button>
-</article>
-<article class="card agendado">
-  <header><span class="hora">Amanhã · 14:00</span><span class="estado">🗓️ agendado no TikTok</span></header>
-  <h2>5 COMANDOS ESSENCIAIS</h2>
-  <textarea id="l7" readonly rows="7">5 comandos do CMD que todo PC precisa (salva pra quando der problema) 💾
-
-1) ping -n 10 8.8.8.8 → perda de pacote = problema na conexão
-2) tasklist → o que está rodando e quanta memória usa
-3) ipconfig /flushdns → site que não abre
-4) winget upgrade → programas desatualizados (--all atualiza tudo, como admin)
-5) driverquery → lista de drivers instalados
-
-✅ Nenhum apaga seus arquivos.
-
-#cmd #windows #dicasdepc #pcgamer #tips35cmd #tecnologia</textarea>
-  <button onclick="copiar('l7', this)">Copiar legenda</button>
-</article>
-<article class="card agendado">
-  <header><span class="hora">Amanhã · 18:00</span><span class="estado">🗓️ agendado no TikTok</span></header>
-  <h2>ATUALIZE TUDO DE UMA VEZ</h2>
-  <textarea id="l8" readonly rows="7">Como atualizar todos os programas do Windows de uma vez 🔄
-
-winget upgrade → lista
-winget upgrade --all → atualiza tudo
-
-Abra o CMD como administrador.
-
-#cmd #windows #winget #dicasdepc #tips35cmd</textarea>
-  <button onclick="copiar('l8', this)">Copiar legenda</button>
-</article>
-<article class="card agendado">
-  <header><span class="hora">Amanhã · 21:00</span><span class="estado">🗓️ agendado no TikTok</span></header>
-  <h2>O QUE LIGA JUNTO COM O WINDOWS</h2>
-  <textarea id="l9" readonly rows="7">Por que seu PC demora pra ligar? Veja o que inicia com o Windows ⏱️
-
-powershell Get-CimInstance Win32_StartupCommand
-explorer shell:startup
-
-✅ Só lista, não muda nada.
-
-#cmd #windows #pclento #inicializacao #tips35cmd</textarea>
-  <button onclick="copiar('l9', this)">Copiar legenda</button>
-</article>
 <article class="card agendado">
   <header><span class="hora">22/11 · 11:30</span><span class="estado">🗓️ agendado no TikTok</span></header>
   <h2>SEU SSD ESTÁ MORRENDO?</h2>
-  <textarea id="l10" readonly rows="7">Como ver a saúde do SSD/HD no Windows 💾
+  <textarea id="l0" readonly rows="7">Como ver a saúde do SSD/HD no Windows 💾
 
 powershell Get-PhysicalDisk
 
@@ -171,12 +31,12 @@ Healthy = ok | Warning/Unhealthy = BACKUP HOJE
 ✅ Só leitura.
 
 #cmd #windows #ssd #backup #tips35cmd</textarea>
-  <button onclick="copiar('l10', this)">Copiar legenda</button>
+  <button onclick="copiar('l0', this)">Copiar legenda</button>
 </article>
 <article class="card agendado">
   <header><span class="hora">22/11 · 18:00</span><span class="estado">🗓️ agendado no TikTok</span></header>
   <h2>DESLIGUE O PC NA HORA CERTA</h2>
-  <textarea id="l11" readonly rows="7">Como agendar o desligamento do PC pelo CMD ⏲️
+  <textarea id="l1" readonly rows="7">Como agendar o desligamento do PC pelo CMD ⏲️
 
 shutdown /s /t 3600 → desliga em 1 hora
 shutdown /a → cancela
@@ -184,6 +44,151 @@ shutdown /a → cancela
 Salve seus arquivos antes.
 
 #cmd #windows #atalho #dicasdepc #tips35cmd</textarea>
+  <button onclick="copiar('l1', this)">Copiar legenda</button>
+</article>
+<article class="card agendado">
+  <header><span class="hora">22/11 · 21:00</span><span class="estado">🗓️ agendado no TikTok</span></header>
+  <h2>COPIE O RESULTADO DE QUALQUER COMANDO</h2>
+  <textarea id="l2" readonly rows="7">Como copiar o resultado de um comando no CMD 📋
+
+ipconfig | clip → copia tudo
+ipconfig /all &gt; rede.txt → salva em arquivo
+
+#cmd #windows #produtividade #atalho #tips35cmd</textarea>
+  <button onclick="copiar('l2', this)">Copiar legenda</button>
+</article>
+<article class="card agendado">
+  <header><span class="hora">Hoje · 11:30</span><span class="estado">🗓️ agendado no TikTok</span></header>
+  <h2>RENOMEIE 100 ARQUIVOS EM 1 SEGUNDO</h2>
+  <textarea id="l3" readonly rows="7">Como renomear vários arquivos de uma vez no Windows (CMD) ⚡
+
+ren *.jpeg *.jpg
+
+Teste antes numa cópia da pasta.
+
+#cmd #windows #produtividade #arquivos #tips35cmd</textarea>
+  <button onclick="copiar('l3', this)">Copiar legenda</button>
+</article>
+<article class="card agendado">
+  <header><span class="hora">Hoje · 18:00</span><span class="estado">🗓️ agendado no TikTok</span></header>
+  <h2>O ATALHO ESCONDIDO DO CMD: F7</h2>
+  <textarea id="l4" readonly rows="7">O atalho escondido do CMD: tecla F7 ⌨️
+
+F7 → histórico de comandos
+doskey /history → lista em texto
+
+#cmd #windows #atalho #produtividade #tips35cmd</textarea>
+  <button onclick="copiar('l4', this)">Copiar legenda</button>
+</article>
+<article class="card agendado">
+  <header><span class="hora">Hoje · 21:00</span><span class="estado">🗓️ agendado no TikTok</span></header>
+  <h2>O MODO DEUS DO WINDOWS</h2>
+  <textarea id="l5" readonly rows="7">Modo Deus do Windows (GodMode) 🛠️
+
+md &quot;GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}&quot;
+
+Cria uma pasta com 200+ configurações. Apagar a pasta desfaz.
+
+#cmd #windows #truque #dicasdepc #tips35cmd</textarea>
+  <button onclick="copiar('l5', this)">Copiar legenda</button>
+</article>
+<article class="card pendente">
+  <header><span class="hora">Amanhã · 11:30</span><span class="estado">⏳ na fila</span></header>
+  <h2>BEM-VINDO AO TIPS35</h2>
+  <textarea id="l6" readonly rows="7">Bem-vindo ao TIPS35 no YouTube! Comandos de Windows e CMD que resolvem problema de verdade: um por Short, todos os dias.
+
+#shorts #windows #cmd #tips35</textarea>
+  <button onclick="copiar('l6', this)">Copiar legenda</button>
+</article>
+<article class="card pendente">
+  <header><span class="hora">Amanhã · 18:00</span><span class="estado">⏳ na fila</span></header>
+  <h2>SEU MONITOR DE 144 HZ TÁ RODANDO A 60?</h2>
+  <textarea id="l7" readonly rows="7">Seu monitor de 144 Hz pode estar rodando a 60 Hz sem você saber 🎮
+
+Conferir:
+powershell &quot;Get-CimInstance Win32_VideoController | select Name,CurrentRefreshRate&quot;
+
+Ajustar:
+start ms-settings:display-advanced
+→ Taxa de atualização → maior valor
+
+⚠️ Se o 144 Hz não aparece, confira o cabo (DisplayPort ou HDMI compatível). Para desfazer, é só voltar para 60 Hz no mesmo lugar.
+
+#cmd #windows #dicasdepc #fpsboost #pcgamer #tips35cmd #monitorgamer</textarea>
+  <button onclick="copiar('l7', this)">Copiar legenda</button>
+</article>
+<article class="card pendente">
+  <header><span class="hora">Amanhã · 21:00</span><span class="estado">⏳ na fila</span></header>
+  <h2>SEU WI-FI TÁ FRACO? O CMD MOSTRA A VERDADE</h2>
+  <textarea id="l8" readonly rows="7">Wi-Fi lento? Veja o sinal real e a velocidade entre o PC e o roteador 📶
+
+netsh wlan show interfaces
+→ Sinal: acima de 70% é ótimo, abaixo de 50% é fraco
+→ Taxa de recepção: velocidade máxima até o roteador
+
+Bônus:
+netsh wlan show drivers
+→ 802.11ax = sua placa é Wi-Fi 6
+
+✅ Só leitura, não muda nada no PC.
+
+#cmd #windows #dicasdepc #fpsboost #pcgamer #tips35cmd #wifi</textarea>
+  <button onclick="copiar('l8', this)">Copiar legenda</button>
+</article>
+<article class="card pendente">
+  <header><span class="hora">25/11 · 11:30</span><span class="estado">⏳ na fila</span></header>
+  <h2>A PASTA SECRETA QUE LIGA PROGRAMAS SOZINHA</h2>
+  <textarea id="l9" readonly rows="7">A pasta escondida que abre programas sozinha quando o PC liga 👀
+
+start shell:startup
+
+Ver no CMD:
+dir /b &quot;%appdata%\Microsoft\Windows\Start Menu\Programs\Startup&quot;
+
+⚠️ Não reconhece um atalho? Pesquise o nome antes. Não precisa apagar: mova o atalho para outra pasta (e coloque de volta para desfazer).
+
+Bônus: start shell:sendto (menu &quot;Enviar para&quot;)
+
+#cmd #windows #dicasdepc #fpsboost #pcgamer #tips35cmd #seguranca</textarea>
+  <button onclick="copiar('l9', this)">Copiar legenda</button>
+</article>
+<article class="card pendente">
+  <header><span class="hora">25/11 · 18:00</span><span class="estado">⏳ na fila</span></header>
+  <h2>SUA RAM PODE ESTAR RODANDO MAIS DEVAGAR</h2>
+  <textarea id="l10" readonly rows="7">Sua memória RAM pode estar rodando mais devagar do que você pagou 🎮
+
+Ver os pentes e a velocidade:
+powershell &quot;Get-CimInstance Win32_PhysicalMemory | ft Capacity,Speed,ConfiguredClockSpeed&quot;
+
+✅ Speed = o que o pente aguenta
+⚠️ ConfiguredClockSpeed menor = rodando abaixo → ative o XMP (Intel) ou EXPO (AMD) na BIOS
+
+Bônus (quanto a placa-mãe aguenta, em KB):
+powershell &quot;Get-CimInstance Win32_PhysicalMemoryArray | ft MaxCapacity,MemoryDevices&quot;
+Confirme no site da placa-mãe, esse valor às vezes vem errado.
+
+Os comandos só leem. Se ficar instável com XMP, volte a opção para Auto na BIOS.
+
+#cmd #windows #dicasdepc #fpsboost #pcgamer #tips35cmd #memoriaram</textarea>
+  <button onclick="copiar('l10', this)">Copiar legenda</button>
+</article>
+<article class="card pendente">
+  <header><span class="hora">25/11 · 21:00</span><span class="estado">⏳ na fila</span></header>
+  <h2>INTERNET FUNCIONA MAS O SITE NÃO ABRE?</h2>
+  <textarea id="l11" readonly rows="7">A internet funciona mas o site não abre? Teste o DNS em 10 segundos 🌐
+
+nslookup google.com
+→ mostra quem respondeu (seu DNS) e o endereço do site
+
+Testar outro DNS sem mudar nada:
+nslookup google.com 1.1.1.1
+
+✅ Os dois respondem = DNS ok
+⚠️ O primeiro falha e o segundo funciona = problema no DNS da operadora (reiniciar o roteador às vezes resolve)
+
+O nslookup só consulta, não altera nenhuma configuração.
+
+#cmd #windows #dicasdepc #fpsboost #pcgamer #tips35cmd #dns</textarea>
   <button onclick="copiar('l11', this)">Copiar legenda</button>
 </article>
 </main>
