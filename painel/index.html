@@ -18,7 +18,7 @@ button { width:100%; margin-top:10px; padding:14px; border:0; border-radius:10px
 </style></head><body><main>
 <h1>Painel de postagem @tips35cmd</h1>
 <p class="sub">Quando chegar a notificação do TikTok: abra o rascunho, toque em <b>Copiar legenda</b> aqui, cole e publique.
-Atualizado em 25/11 01:00.</p>
+Atualizado em 25/11 11:31.</p>
 
 <article class="card fora">
   <header><span class="hora">24/11 · 11:30</span><span class="estado">🚫 fora do TikTok</span></header>
@@ -63,8 +63,8 @@ netsh wlan show drivers
 #cmd #windows #dicasdepc #fpsboost #pcgamer #tips35cmd #wifi</textarea>
   <button onclick="copiar('l2', this)">Copiar legenda</button>
 </article>
-<article class="card pronto">
-  <header><span class="hora">Hoje · 11:30</span><span class="estado">✅ vídeo pronto</span></header>
+<article class="card enviado">
+  <header><span class="hora">Hoje · 11:30</span><span class="estado">📲 no seu TikTok: publique</span></header>
   <h2>A PASTA SECRETA QUE LIGA PROGRAMAS SOZINHA</h2>
   <textarea id="l3" readonly rows="7">A pasta escondida que abre programas sozinha quando o PC liga 👀
 
@@ -136,6 +136,65 @@ O motivo: a Inicialização Rápida faz o &quot;Desligar&quot; funcionar como um
 
 #cmd #windows #dicasdepc #fpsboost #pcgamer #tips35cmd #curiosidades</textarea>
   <button onclick="copiar('l6', this)">Copiar legenda</button>
+</article>
+<article class="card pendente">
+  <header><span class="hora">Amanhã · 18:00</span><span class="estado">⏳ na fila</span></header>
+  <h2>SEU JOGO TRAVA? OLHA A DATA DO DRIVER</h2>
+  <textarea id="l7" readonly rows="7">Jogo novo travando numa placa boa? Confere a data do driver de vídeo 🎮
+
+Ver a placa, a versão e a data do driver:
+powershell &quot;Get-CimInstance Win32_VideoController | fl Name,DriverVersion,DriverDate&quot;
+
+Na NVIDIA, os 5 últimos números da versão viram a versão do site (32.0.15.6094 = 560.94).
+
+Bônus, relatório completo na área de trabalho:
+dxdiag /t %userprofile%\Desktop\dx.txt
+
+✅ Os comandos só leem, não mudam nada. Driver novo, só do site oficial da NVIDIA, AMD ou Intel.
+
+💬 Qual jogo tá travando aí? Comenta que eu faço o vídeo.
+
+#cmd #windows #dicasdepc #fpsboost #pcgamer #tips35cmd #placadevideo</textarea>
+  <button onclick="copiar('l7', this)">Copiar legenda</button>
+</article>
+<article class="card pendente">
+  <header><span class="hora">27/11 · 11:30</span><span class="estado">⏳ na fila</span></header>
+  <h2>SUA OPERADORA DIVIDE O SEU IP?</h2>
+  <textarea id="l8" readonly rows="7">Sua operadora pode estar dividindo o seu IP com outros clientes 🌐 O IPv6 resolve, e você pode já ter.
+
+Ver se o seu PC tem IPv6:
+ipconfig | findstr IPv6
+(endereço que começa com fe80 é só da rede de casa e não conta)
+
+Testar se funciona de verdade:
+ping -6 google.com
+
+✅ Os comandos só testam, não mudam nada. Pra ativar o IPv6, fale com a sua operadora.
+
+💬 Deu IPv6 aí? Comenta qual é a sua operadora.
+
+#cmd #windows #dicasdepc #fpsboost #pcgamer #tips35cmd #internet</textarea>
+  <button onclick="copiar('l8', this)">Copiar legenda</button>
+</article>
+<article class="card pendente">
+  <header><span class="hora">27/11 · 18:00</span><span class="estado">⏳ na fila</span></header>
+  <h2>SEU WINDOWS TÁ ATUALIZADO MESMO?</h2>
+  <textarea id="l9" readonly rows="7">Seu Windows tá atualizado mesmo? Esse comando mostra a data da última atualização de verdade 🔒
+
+As 5 atualizações mais recentes:
+powershell &quot;Get-HotFix | sort InstalledOn -desc | select -first 5 HotFixID,Description,InstalledOn&quot;
+
+Abrir o histórico do Windows Update:
+start ms-settings:windowsupdate-history
+
+A Microsoft solta correções de segurança toda segunda terça-feira do mês. Se a mais nova tem meses, algo travou.
+
+✅ Os comandos só leem, não mudam nada. Para atualizar, use o próprio Windows Update.
+
+💬 Qual problema o seu PC tem? Comenta que eu faço o vídeo.
+
+#cmd #windows #dicasdepc #fpsboost #pcgamer #tips35cmd #seguranca</textarea>
+  <button onclick="copiar('l9', this)">Copiar legenda</button>
 </article>
 </main>
 <script>
