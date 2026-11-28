@@ -18,28 +18,29 @@ button { width:100%; margin-top:10px; padding:14px; border:0; border-radius:10px
 </style></head><body><main>
 <h1>Painel de postagem @tips35cmd</h1>
 <p class="sub">Quando chegar a notificação do TikTok: abra o rascunho, toque em <b>Copiar legenda</b> aqui, cole e publique.
-Atualizado em 27/11 08:48.</p>
+Atualizado em 28/11 01:00.</p>
 
-<article class="card pronto">
-  <header><span class="hora">26/11 · 11:30</span><span class="estado">✅ vídeo pronto</span></header>
-  <h2>DESLIGA O PC TODO DIA? O WINDOWS DISCORDA</h2>
-  <textarea id="l0" readonly rows="7">Você desliga o PC todo dia… mas o Windows acha que ele está ligado há semanas 🤯
+<article class="card agendado">
+  <header><span class="hora">27/11 · 18:00</span><span class="estado">🗓️ agendado no TikTok</span></header>
+  <h2>INTERNET FUNCIONA MAS O SITE NÃO ABRE?</h2>
+  <textarea id="l0" readonly rows="7">A internet funciona mas o site não abre? Teste o DNS em 10 segundos 🌐
 
-Ver quando o Windows iniciou do zero:
-powershell (Get-CimInstance Win32_OperatingSystem).LastBootUpTime
+nslookup google.com
+→ mostra quem respondeu (seu DNS) e o endereço do site
 
-Em dias e horas:
-powershell &quot;(Get-Date) - (Get-CimInstance Win32_OperatingSystem).LastBootUpTime | ft Days,Hours&quot;
+Testar outro DNS sem mudar nada:
+nslookup google.com 1.1.1.1
 
-O motivo: a Inicialização Rápida faz o &quot;Desligar&quot; funcionar como uma hibernação. Só o &quot;Reiniciar&quot; começa tudo do zero.
+✅ Os dois respondem = DNS ok
+⚠️ O primeiro falha e o segundo funciona = problema no DNS da operadora (reiniciar o roteador às vezes resolve)
 
-✅ Dica: use Reiniciar de vez em quando. Os comandos só leem a data, não mudam nada.
+O nslookup só consulta, não altera nenhuma configuração.
 
-#cmd #windows #dicasdepc #fpsboost #pcgamer #tips35cmd #curiosidades</textarea>
+#cmd #windows #dicasdepc #fpsboost #pcgamer #tips35cmd #dns</textarea>
   <button onclick="copiar('l0', this)">Copiar legenda</button>
 </article>
-<article class="card pronto">
-  <header><span class="hora">26/11 · 18:00</span><span class="estado">✅ vídeo pronto</span></header>
+<article class="card agendado">
+  <header><span class="hora">Hoje · 12:00</span><span class="estado">🗓️ agendado no TikTok</span></header>
   <h2>SEU JOGO TRAVA? OLHA A DATA DO DRIVER</h2>
   <textarea id="l1" readonly rows="7">Jogo novo travando numa placa boa? Confere a data do driver de vídeo 🎮
 
@@ -58,10 +59,45 @@ dxdiag /t %userprofile%\Desktop\dx.txt
 #cmd #windows #dicasdepc #fpsboost #pcgamer #tips35cmd #placadevideo</textarea>
   <button onclick="copiar('l1', this)">Copiar legenda</button>
 </article>
+<article class="card agendado">
+  <header><span class="hora">Hoje · 18:00</span><span class="estado">🗓️ agendado no TikTok</span></header>
+  <h2>DESLIGA O PC TODO DIA? O WINDOWS DISCORDA</h2>
+  <textarea id="l2" readonly rows="7">Você desliga o PC todo dia… mas o Windows acha que ele está ligado há semanas 🤯
+
+Ver quando o Windows iniciou do zero:
+powershell (Get-CimInstance Win32_OperatingSystem).LastBootUpTime
+
+Em dias e horas:
+powershell &quot;(Get-Date) - (Get-CimInstance Win32_OperatingSystem).LastBootUpTime | ft Days,Hours&quot;
+
+O motivo: a Inicialização Rápida faz o &quot;Desligar&quot; funcionar como uma hibernação. Só o &quot;Reiniciar&quot; começa tudo do zero.
+
+✅ Dica: use Reiniciar de vez em quando. Os comandos só leem a data, não mudam nada.
+
+#cmd #windows #dicasdepc #fpsboost #pcgamer #tips35cmd #curiosidades</textarea>
+  <button onclick="copiar('l2', this)">Copiar legenda</button>
+</article>
+<article class="card agendado">
+  <header><span class="hora">Amanhã · 12:00</span><span class="estado">🗓️ agendado no TikTok</span></header>
+  <h2>A PASTA SECRETA QUE LIGA PROGRAMAS SOZINHA</h2>
+  <textarea id="l3" readonly rows="7">A pasta escondida que abre programas sozinha quando o PC liga 👀
+
+start shell:startup
+
+Ver no CMD:
+dir /b &quot;%appdata%\Microsoft\Windows\Start Menu\Programs\Startup&quot;
+
+⚠️ Não reconhece um atalho? Pesquise o nome antes. Não precisa apagar: mova o atalho para outra pasta (e coloque de volta para desfazer).
+
+Bônus: start shell:sendto (menu &quot;Enviar para&quot;)
+
+#cmd #windows #dicasdepc #fpsboost #pcgamer #tips35cmd #seguranca</textarea>
+  <button onclick="copiar('l3', this)">Copiar legenda</button>
+</article>
 <article class="card pronto">
-  <header><span class="hora">Hoje · 11:30</span><span class="estado">✅ vídeo pronto</span></header>
+  <header><span class="hora">Amanhã · 18:00</span><span class="estado">✅ vídeo pronto</span></header>
   <h2>SUA OPERADORA DIVIDE O SEU IP?</h2>
-  <textarea id="l2" readonly rows="7">Sua operadora pode estar dividindo o seu IP com outros clientes 🌐 O IPv6 resolve, e você pode já ter.
+  <textarea id="l4" readonly rows="7">Sua operadora pode estar dividindo o seu IP com outros clientes 🌐 O IPv6 resolve, e você pode já ter.
 
 Ver se o seu PC tem IPv6:
 ipconfig | findstr IPv6
@@ -75,12 +111,12 @@ ping -6 google.com
 💬 Deu IPv6 aí? Comenta qual é a sua operadora.
 
 #cmd #windows #dicasdepc #fpsboost #pcgamer #tips35cmd #internet</textarea>
-  <button onclick="copiar('l2', this)">Copiar legenda</button>
+  <button onclick="copiar('l4', this)">Copiar legenda</button>
 </article>
 <article class="card pronto">
-  <header><span class="hora">Hoje · 18:00</span><span class="estado">✅ vídeo pronto</span></header>
+  <header><span class="hora">30/11 · 12:00</span><span class="estado">✅ vídeo pronto</span></header>
   <h2>SEU WINDOWS TÁ ATUALIZADO MESMO?</h2>
-  <textarea id="l3" readonly rows="7">Seu Windows tá atualizado mesmo? Esse comando mostra a data da última atualização de verdade 🔒
+  <textarea id="l5" readonly rows="7">Seu Windows tá atualizado mesmo? Esse comando mostra a data da última atualização de verdade 🔒
 
 As 5 atualizações mais recentes:
 powershell &quot;Get-HotFix | sort InstalledOn -desc | select -first 5 HotFixID,Description,InstalledOn&quot;
@@ -95,12 +131,12 @@ A Microsoft solta correções de segurança toda segunda terça-feira do mês. S
 💬 Qual problema o seu PC tem? Comenta que eu faço o vídeo.
 
 #cmd #windows #dicasdepc #fpsboost #pcgamer #tips35cmd #seguranca</textarea>
-  <button onclick="copiar('l3', this)">Copiar legenda</button>
+  <button onclick="copiar('l5', this)">Copiar legenda</button>
 </article>
 <article class="card pronto">
-  <header><span class="hora">Amanhã · 11:30</span><span class="estado">✅ vídeo pronto</span></header>
+  <header><span class="hora">30/11 · 18:00</span><span class="estado">✅ vídeo pronto</span></header>
   <h2>SUA PLACA DE VÍDEO TÁ ESQUENTANDO?</h2>
-  <textarea id="l4" readonly rows="7">Seu FPS cai depois de meia hora de jogo? Pode ser a placa de vídeo esquentando 🔥
+  <textarea id="l6" readonly rows="7">Seu FPS cai depois de meia hora de jogo? Pode ser a placa de vídeo esquentando 🔥
 
 Temperatura e uso da placa (NVIDIA):
 nvidia-smi --query-gpu=temperature.gpu,utilization.gpu --format=csv
@@ -115,12 +151,12 @@ AMD ou Intel: Gerenciador de Tarefas &gt; Desempenho &gt; GPU.
 💬 Qual problema o seu PC tem? Comenta que eu faço o vídeo.
 
 #cmd #windows #dicasdepc #fpsboost #pcgamer #tips35cmd #placadevideo</textarea>
-  <button onclick="copiar('l4', this)">Copiar legenda</button>
+  <button onclick="copiar('l6', this)">Copiar legenda</button>
 </article>
 <article class="card pronto">
-  <header><span class="hora">Amanhã · 18:00</span><span class="estado">✅ vídeo pronto</span></header>
+  <header><span class="hora">01/12 · 12:00</span><span class="estado">✅ vídeo pronto</span></header>
   <h2>INTERNET NO CABO TÁ LENTA?</h2>
-  <textarea id="l5" readonly rows="7">Paga 300 mega e no cabo não passa de 100? Pode ser o próprio cabo 🔌
+  <textarea id="l7" readonly rows="7">Paga 300 mega e no cabo não passa de 100? Pode ser o próprio cabo 🔌
 
 Velocidade em que a placa de rede conectou:
 powershell &quot;Get-NetAdapter | select Name,Status,LinkSpeed&quot;
@@ -135,12 +171,12 @@ O certo é 1 Gbps. Se aparece 100 Mbps, troque o cabo por um Cat5e ou Cat6 e tes
 💬 Qual problema o seu PC tem? Comenta que eu faço o vídeo.
 
 #cmd #windows #dicasdepc #fpsboost #pcgamer #tips35cmd #internet</textarea>
-  <button onclick="copiar('l5', this)">Copiar legenda</button>
+  <button onclick="copiar('l7', this)">Copiar legenda</button>
 </article>
 <article class="card pendente">
-  <header><span class="hora">29/11 · 11:30</span><span class="estado">⏳ na fila</span></header>
+  <header><span class="hora">01/12 · 18:00</span><span class="estado">⏳ na fila</span></header>
   <h2>SEU PC TÁ TRAVANDO DO NADA?</h2>
-  <textarea id="l6" readonly rows="7">Seu PC trava ou reinicia do nada? O Windows anota cada erro num diário escondido 🕵️
+  <textarea id="l8" readonly rows="7">Seu PC trava ou reinicia do nada? O Windows anota cada erro num diário escondido 🕵️
 
 Os 3 erros mais recentes do sistema:
 powershell &quot;Get-WinEvent -FilterHashtable @{LogName=&#x27;System&#x27;;Level=1,2} -MaxEvents 3 | fl Id,ProviderName,TimeCreated&quot;
@@ -155,7 +191,7 @@ Erro 41 (Kernel-Power) = o PC desligou sem o desligamento normal. Erro 7 (disk) 
 💬 Qual problema o seu PC tem? Comenta que eu faço o vídeo.
 
 #cmd #windows #dicasdepc #fpsboost #pcgamer #tips35cmd #telaazul</textarea>
-  <button onclick="copiar('l6', this)">Copiar legenda</button>
+  <button onclick="copiar('l8', this)">Copiar legenda</button>
 </article>
 </main>
 <script>
